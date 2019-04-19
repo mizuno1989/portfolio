@@ -125,9 +125,6 @@ $lvbcolor: #B6B3AE;
   font-size: 30px;
   text-align: right;
   padding: 15px;
-  &:hover {
-    background-color: rgb(149, 149, 149);
-  }
   @include small {
     display: none;
   }
