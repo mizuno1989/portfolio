@@ -1,7 +1,7 @@
 $(function () {
-  $('#p-header__sp--menu--icon').on('click', function () {
+  $('#p-header__sp--menuIcon--wrap').on('click', function () {
+    $('#p-header__sp--menuIcon--wrap').toggleClass('open');
     $('.p-header__gNav--list').slideToggle(200);
-    $("i", this).toggleClass("fa-bars fa-times");
   });
 
   $('.p-main__enjoy--subTitle').on('click', function () {

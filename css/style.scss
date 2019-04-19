@@ -24,7 +24,7 @@ $lvbcolor: #B6B3AE;
     @content;
   }
 }
-// ipad限定ブレークポイント
+// pad限定ブレークポイント
 @mixin mid {
   @media print, screen and (min-width: 641px) and (max-width: 959px) {
     @content;
@@ -112,36 +112,54 @@ $lvbcolor: #B6B3AE;
     display: none;
   }
 }
-#p-sp__gNav--button {
- width:40px;
- height:20px;
- outline: none;
- border: none;
- font-size: 20px;
- margin:50px auto;
- display:block;
+#p-header__sp--menuIcon--wrap {
+  display: block;
+  width: 40px;
+  height: 40px;
+  position: relative;
+  top: 6px;
+  right: 5px;
+  z-index: 100;
 }
-#p-header__sp--menu--icon {
-  font-size: 30px;
-  text-align: right;
-  padding: 15px;
+.p-header__sp--menu--iconList {
+  position: relative;
   @include small {
     display: none;
   }
-}
-.fa-bars {
-  &:hover {
-    opacity: 0.5;
+  >li {
+    display: block;
+    height: 3px;
+    background: #000;
+    position:absolute;
+    width: 100%;
+    left: 0;
+    transition: 0.5s ease-in-out;
+    &:nth-child(1){
+      top:0px;
+    }
+    &:nth-child(2){
+      top:12px;
+    }
+    &:nth-child(3){
+      top:24px;
+    }
   }
 }
-.p-header__sp--topLink {
-  text-decoration: none;
-  color: #FFF;
-}
-.p-header__sp--menu--title {
-  padding: 0 10px;
-  background-color: $tbcolor;
-  color: #FFF;
+.open .p-header__sp--menu--iconList {
+  >li {
+    &:nth-child(1) {
+      top: 12px;
+      transform: rotate(135deg);
+    }
+    &:nth-child(2) {
+      width: 0;
+      left: 50%;
+      }
+    &:nth-child(3) {
+      top: 12px;
+      transform: rotate(-135deg);
+      }
+  }
 }
 .p-header__gNav--list {
   display: none;
@@ -163,11 +181,11 @@ $lvbcolor: #B6B3AE;
     }
   }
 }
-.p-header__pc--title {
-  display: none;
-  @include small {
-    display: block;
-  }
+.p-header__sp--topLink {
+  text-decoration: none;
+  color: #FFF;
+  padding: 0 10px;
+  background-color: $tbcolor;
 }
 .p-header__pc--topLink {
   display: none;
