@@ -108,6 +108,7 @@ $lvbcolor: #B6B3AE;
   justify-content: space-between;
   align-items: center;
   font-size: 30px;
+  padding: 10px;
   @include small {
     display: none;
   }
@@ -120,9 +121,6 @@ $lvbcolor: #B6B3AE;
   top: 6px;
   right: 5px;
   z-index: 100;
-  @include small {
-    display: none;
-  }
 }
 .p-header__sp--menu--iconList {
   position: relative;
