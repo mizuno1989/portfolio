@@ -4,8 +4,8 @@ $(function () {
     $("i", this).toggleClass("fa-bars fa-times");
   });
 
-  $('.p-main__enjoy--list > li').on('click', function () {
-    $(this).children('ul').slideToggle();
+  $('.p-main__enjoy--subTitle').on('click', function () {
+    $(this).next('ul').slideToggle();
   });
 
   $('a[href^="#"]').on('click', function() {

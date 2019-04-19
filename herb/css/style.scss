@@ -125,9 +125,6 @@ $lvbcolor: #B6B3AE;
   font-size: 30px;
   text-align: right;
   padding: 15px;
-  &:hover {
-    background-color: rgb(149, 149, 149);
-  }
   @include small {
     display: none;
   }
@@ -708,7 +705,6 @@ $lvbcolor: #B6B3AE;
   list-style: none;
   font-size: 0;
   >li {
-    font-size: 16px;
     padding: 20px 10px;
     width: 25%;
     text-align: center;
@@ -720,7 +716,7 @@ $lvbcolor: #B6B3AE;
 .p-footer__skill--more--title {
   letter-spacing: 0.1rem;
   color: #FFF;
-  font-size: 1vw;
+  font-size: 5vw;
   @include small {
     font-size: 16px;
   }
