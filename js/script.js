@@ -1,6 +1,7 @@
 $(function () {
-  $('#p-header__sp--menuIcon--wrap').on('click', function () {
-    $('#p-header__sp--menuIcon--wrap').toggleClass('open');
+  var $spIcon = $('#p-header__sp--menuIcon--wrap');
+  $spIcon.on('click', function () {
+    $spIcon.toggleClass('open');
     $('.p-header__gNav--list').slideToggle(200);
   });
 

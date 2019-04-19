@@ -103,7 +103,7 @@ $lvbcolor: #B6B3AE;
   z-index: 10;
   background-color: #FFF;
 }
-#p-header__sp--menu--wrap {
+.p-header__sp--menu--wrap {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -123,9 +123,6 @@ $lvbcolor: #B6B3AE;
 }
 .p-header__sp--menu--iconList {
   position: relative;
-  @include small {
-    display: none;
-  }
   >li {
     display: block;
     height: 3px;
@@ -133,6 +130,8 @@ $lvbcolor: #B6B3AE;
     position:absolute;
     width: 100%;
     left: 0;
+    -webkit-transition: 0.5s ease-in-out;
+    -moz-transition: 0.5s ease-in-out;
     transition: 0.5s ease-in-out;
     &:nth-child(1){
       top:0px;
@@ -149,6 +148,8 @@ $lvbcolor: #B6B3AE;
   >li {
     &:nth-child(1) {
       top: 12px;
+      -webkit-transform: rotate(135deg);
+      -moz-transform: rotate(135deg);
       transform: rotate(135deg);
     }
     &:nth-child(2) {
@@ -157,6 +158,8 @@ $lvbcolor: #B6B3AE;
       }
     &:nth-child(3) {
       top: 12px;
+      -webkit-transform: rotate(-135deg);
+      -moz-transform: rotate(-135deg);
       transform: rotate(-135deg);
       }
   }
