@@ -94,8 +94,10 @@ $lvbcolor: #B6B3AE;
   width: 100%;
 }
 .p-header__gNav--wrap {
-  height: 85px;
   background-color: $bgcolor;
+  @include small {
+    height: 85px;
+  }
 }
 .p-header__gNav {
   position: fixed;
