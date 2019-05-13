@@ -33,8 +33,6 @@ $atcolor: #FFF;
   display: flex;
   justify-content: center;
   align-items: center;
-  @include sm {
-  }
 }
 .p-header__top--title {
   color: #FFF;
@@ -237,23 +235,43 @@ $atcolor: #FFF;
   background-image: url(../img/pomain.jpg);
   background-size: cover;
   background-repeat: no-repeat;
-  height: 100vh;
+  @include lg {
+    height: 100vh;
+  }
 }
 .p-work__title {
   font-weight: 400;
-  font-size: 30px;
+  font-size: 40px;
   text-align: center;
   padding: 50px 0;
   color: #FFF;
 }
+.p-work__title--bg {
+  background-color: rgba(00, 00, 00, 0.5);
+  @include lg {
+    background-color: rgba(00, 00, 00, 0);
+  }
+}
 .p-work-inner-wrap {
-  display: flex;
-  justify-content: space-around;
+  margin: 0 auto;
+  max-width: 400px;
+  @include lg {
+    display: flex;
+    justify-content: space-around;
+    max-width: 950px;
+  }
 }
 .p-work-inner {
   background-color: #FFF;
   max-width: 500px;
   border-radius: 10px;
+  margin-top: 20px;
+  &:first-child {
+    margin-top: 0;
+  }
+  @include lg {
+    margin-top: 0;
+  }
 }
 .p-work-link {
   text-decoration: none;
@@ -267,7 +285,7 @@ $atcolor: #FFF;
   width: 100%;
 }
 .p-work-text {
-  margin: 20px 0;
+  padding: 20px 0;
   text-align: center;
   letter-spacing: 0.3px;
 }
